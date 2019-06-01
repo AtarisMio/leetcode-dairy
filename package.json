@@ -1,7 +1,14 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "build": "lerna run build"
+  },
   "devDependencies": {
     "lerna": "^3.13.4"
+  },
+  "dependencies": {
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.1"
   }
 }
