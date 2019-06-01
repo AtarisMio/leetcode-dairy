@@ -20,24 +20,35 @@ declare class ListNode {
 const addTwoNumbers = (l1: ListNode, l2: ListNode): ListNode => {
     let temp: number;
     let plusFlag = false;
-    let answer: ListNode | undefined;
-    let tempAnswer!: ListNode;
-    while(l1 || l2) {
+    let answer: ListNode = new ListNode(0);
+    let tempAnswer: ListNode = answer;
+    while (l1 && l2) {
         temp = (l1 && l1.val) + (l2 && l2.val) + (plusFlag ? 1 : 0);
         plusFlag = temp >= 10;
         temp %= 10;
-        if (answer) {
-            tempAnswer.next = new ListNode(temp);
-            tempAnswer = tempAnswer.next;
-        } else {
-            answer =  new ListNode(temp);
-            tempAnswer = answer;
-        }
+        tempAnswer.next = new ListNode(temp);
+        tempAnswer = tempAnswer.next;
         l1 = l1 && l1.next!;
         l2 = l2 && l2.next!;
     }
-    if (plusFlag) {
-        tempAnswer.next = new ListNode(1);
+    let cur = (l1 || l2);
+    if (cur) {
+        tempAnswer.next = cur;
     }
-    return answer!;
+    let next = cur;
+    while (plusFlag && next) {
+        cur = next;
+        temp = next.val + 1;
+        plusFlag = temp >= 10;
+        if (plusFlag) {
+            next.val = 0;
+            next = next.next!;
+        } else {
+            next.val += 1;
+        }
+    }
+    if (plusFlag) {
+        (cur || tempAnswer).next = new ListNode(1);
+    }
+    return answer.next!;
 };
