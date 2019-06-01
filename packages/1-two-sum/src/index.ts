@@ -3,14 +3,15 @@
  * @param {number} target
  * @return {number[]}
  */
-var twoSum = (nums: number[], target: number): number[] => {
-    let index = 0;
-    let answer = -1;
-    for (; index <= nums.length; index++) {
-        answer = nums.indexOf(target - nums[index], index + 1);
-        if (answer !== -1) {
-            break;
+const twoSum = (nums: number[], target: number): number[] => {
+    let hashmap: { [key: number]: number } = {};
+    for (let index = 0; index < nums.length; index++) {
+        let n = nums[index];
+        let test = target - n;
+        if (hashmap.hasOwnProperty(test)) {
+            return [hashmap[test], index];
         }
+        hashmap[n] = index;
     }
-    return [index, answer];
+    return [];
 };

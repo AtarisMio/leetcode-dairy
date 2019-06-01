@@ -21,3 +21,9 @@
 [2,7,11,15]
 9
 ```
+
+## 骚操作:
+
+1. 用hashmap会比遍历快，但是会多消耗内存
+2. `Object.prototype.hasOwnProperty`会比直接取值判断是否为undefined快
+3. 减少重复的计算
