@@ -3,27 +3,14 @@
  * @return {number}
  */
 const lengthOfLongestSubstring = function (s: string): number {
-    let start = 0;
+    const sLength = s.length;
+    if (sLength <= 1) return sLength;
     let length = 0;
-    let maxLength = 0;
-    const searched: { [key: string]: number } = {};
-    for (let index = start; index < s.length; index++) {
-        let testChar = s[index];
-        if (searched[testChar] >= 0) {
-            if (maxLength < length) {
-                maxLength = length;
-            }
-            length = length - searched[testChar] + start;
-            s.slice(start, searched[testChar]).split('').forEach(c => searched[c] = -1);
-            start = searched[testChar] + 1;
-            searched[testChar] = index;
-            continue;
-        }
-        searched[testChar] = index;
-        length++;
-        if (maxLength < length) {
-            maxLength = length;
-        }
+    const hashmap: Record<string, number> = {};
+    for(let i = 0, j = 0; j < sLength; j++) {
+        i = Math.max(hashmap[s[j]] || 0, i);
+        length = Math.max(length, j - i + 1);
+        hashmap[s[j]] = j + 1;
     }
-    return maxLength;
+    return length;
 };
