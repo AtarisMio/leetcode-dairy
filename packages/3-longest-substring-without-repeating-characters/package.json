@@ -1,0 +1,32 @@
+{
+  "name": "3-longest-substring-without-repeating-characters",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "keywords": [],
+  "author": "Ataris <512056026@qq.com>",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtrisMio/leetcode-dairy.git"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean & tsc -p ."
+  },
+  "bugs": {
+    "url": "https://github.com/AtrisMio/leetcode-dairy/issues"
+  },
+  "homepage": "https://github.com/AtrisMio/leetcode-dairy#readme",
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "typescript": "^3.5.1"
+  }
+}
