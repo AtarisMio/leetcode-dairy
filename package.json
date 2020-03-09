@@ -5,7 +5,21 @@
     "build": "lerna run build"
   },
   "devDependencies": {
-    "lerna": "^3.13.4"
+    "@typescript-eslint/eslint-plugin": "^2.22.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-typescript": "^7.0.0",
+    "eslint-config-erb": "^0.3.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-compat": "^3.5.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "lerna": "^3.13.4",
+    "prettier": "^1.19.1"
   },
   "dependencies": {
     "rimraf": "^2.6.3",
