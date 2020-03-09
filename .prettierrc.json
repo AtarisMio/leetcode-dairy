@@ -1,0 +1,13 @@
+{
+    "overrides": [
+        {
+            "files": [".prettierrc", ".babelrc", ".eslintrc", ".stylelintrc"],
+            "options": {
+                "parser": "json"
+            }
+        }
+    ],
+    "indent": 4,
+    "singleQuote": true,
+    "trailingComma": "all"
+}
