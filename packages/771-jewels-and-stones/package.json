@@ -1,0 +1,26 @@
+{
+  "name": "771-jewels-and-stones",
+  "version": "0.0.0",
+  "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
+  "author": "Ataris <512056026@qq.com>",
+  "homepage": "https://github.com/AtarisMio/leetcode-dairy#readme",
+  "license": "MIT",
+  "main": "lib/771-jewels-and-stones.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtarisMio/leetcode-dairy.git"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "npm run clean & tsc -p ."
+  },
+  "bugs": {
+    "url": "https://github.com/AtarisMio/leetcode-dairy/issues"
+  }
+}
